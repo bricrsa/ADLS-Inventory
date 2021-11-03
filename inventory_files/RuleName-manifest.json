@@ -1,0 +1,46 @@
+{
+   "destinationContainer" : "inventory",
+   "endpoint" : "https://<storage-account-name>.blob.core.windows.net",
+   "files" : [
+      {
+         "blob" : "2021/11/02/05-46-51/Rulename/Rulename.csv",
+         "size" : 18109123
+      }
+   ],
+   "inventoryCompletionTime" : "2021-11-02T06:17:19Z",
+   "inventoryStartTime" : "2021-11-02T05:46:51Z",
+   "ruleDefinition" : {
+      "filters" : {
+         "blobTypes" : [ "blockBlob", "appendBlob" ],
+         "includeBlobVersions" : false,
+         "includeDeleted" : false,
+         "includeSnapshots" : false,
+         "prefixMatch" : []
+      },
+      "format" : "csv",
+      "objectType" : "blob",
+      "schedule" : "daily",
+      "schemaFields" : [
+         "Name",
+         "Creation-Time",
+         "Last-Modified",
+         "Content-Length",
+         "AccessTier",
+         "Owner",
+         "Group",
+         "Permissions",
+         "Acl",
+         "Metadata",
+         "LastAccessTime"
+      ]
+   },
+   "ruleName" : "Rulename",
+   "status" : "Succeeded",
+   "summary" : {
+      "directoryCount" : 543,
+      "fileCount" : 100471,
+      "objectCount" : 101014,
+      "totalObjectSize" : 13839974879
+   },
+   "version" : "1.0"
+}
