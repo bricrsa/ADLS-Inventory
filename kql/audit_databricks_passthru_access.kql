@@ -1,0 +1,9 @@
+StorageBlobLogs
+| where OperationName == 'ReadFile'
+| where AuthenticationType == 'OAuth'
+| where UserAgentHeader contains_cs "Databricks"
+| extend DatabricksRunTime = extract("DBR/([\\s\\S]+)", 1, UserAgentHeader)
+| extend StorageAccount = extract(@"https://([^.]+)", 1, Uri)
+| extend Container = extract(@".net/([^/]+)", 1, Uri)
+| extend FolderStructure = extract(@".net/[^/]+/(.+)/[^/]+\?.*", 1, Uri)
+| summarize  ReadCount = count(Uri)  by ReadHour=bin(TimeGenerated, 1h), RequesterUpn, DatabricksRunTime, StorageAccount, Container, FolderStructure
