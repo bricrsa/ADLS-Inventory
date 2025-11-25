@@ -22,7 +22,7 @@ Two primary options exist to capture and store this data for this scenario.
 - Send the data to a Log Analytics workspace,
 - Send the data to a storage account.
 
-In this repo, data is sent to Log Analytics and an example KQL query is highlighted.  
+In this repo, data is sent to Log Analytics and an example KQL query is highlighted. Note that it is possible to send logs from many different resources to a Log Analytics workspace, so if there are many storage accounts, the logs can be sent to one workspace for easy summarisation. 
 
 Example [KQL Query](/kql/audit_databricks_passthru_access.kql), highlighting Databricks Runtime, user and location.  
 
