@@ -1,3 +1,10 @@
+# *Contents*
+
+- [ADLS Inventory](#adls-inventoryadls-inventory)
+- [ADLS Diagnostic logs](#understanding-storage-locations-in-use-by-legacy-azure-databricks-notebooks)
+
+<br><br>
+
 # ADLS-Inventory
 Using blob inventory feature to understand what is on the data lake
 
